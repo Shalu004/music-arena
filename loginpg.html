@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Band Website</title>
+    
+    <style>
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    height: 100vh;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+.video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+
+.login-container {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+/* Button and Links */
+.login-btn {
+    background: #28a3e1;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.login-btn:hover {
+    background: #ffcc00;
+}
+
+.forgot-password-link {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password-link:hover {
+    color: #FFD700;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.signup-link a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://cdn.pixabay.com/video/2015/12/11/1630-148614385_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="dashboard.html" method="post" class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="login-btn">Login</button>
+                    <a href="forgot-password.html" class="forgot-password-link">Forgot Password?</a>
+                </div>
+            </form>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </section>
+    // JavaScript for simple login form validation
+    <script>
+document.querySelector('.login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    if (username === '' || password === '') {
+        alert('Please fill in both fields');
+    } else {
+        alert('Logging Successful.');
+        // Here you can handle the login logic (e.g., AJAX request or redirect to a dashboard)
+        // window.location.href = 'dashboard.html'; // Redirect to dashboard page
+    }
+});
+    </script>
+</body>
+</html>
+

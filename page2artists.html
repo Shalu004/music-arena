@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Music Arena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Roboto', sans-serif;
+    color: #0a0944;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #204d48;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    border-radius:20PX;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #57f155;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.login-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #FFD700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color:  #00ff22;
+    cursor: pointer;
+}
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ddf908;
+        }
+
+        .shows-hero {
+            padding-top: 200px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.freepik.com/free-photo/sound-wave-technology-cheering-crowd-concert-remixed-media_53876-108553.jpg?t=st=1734552379~exp=1734555979~hmac=e6753836e98929707bf31588b844f60d7ed7c9b4c1728f43d81d64571d07455f&w=996');
+            background-size: cover;
+            color: #fff;
+            padding-bottom: 80px;
+        }
+        .hero-about {
+            padding-top: 80px;
+            text-align: center;
+            background: linear-gradient(rgba(110, 58, 58, 0.7), rgba(0,0,0,0.7));
+            background-size: cover;
+            color: #fff;
+            padding-bottom: 60px;
+        }
+
+        .hero-about h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .band-story {
+            padding: 5rem 0;
+            background: linear-gradient(135deg,#64d91b74, #2cc6beca, #a03c1bd0);;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            color: #131111;
+        }
+
+        .members-section {
+            padding: 4rem 0;
+            background:linear-gradient(135deg,#eea00fa6, #428b868e, #034d26da);
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background: rgb(237, 228, 220);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .member-role {
+            color: #e31837;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #204d48;
+    color:#f9f9f9
+}
+      
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Screenshot (53).png" alt="Band Logo">
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="page1home.html">Home</a></li>
+                <li><a href="page2artists.html">Artists</a></li>
+                <li><a href="page3music.html">Music</a></li>
+                <li><a href="page4shows.html">Shows</a></li>
+                <li><a href="page5cont.html">Contact</a></li>
+            </ul>
+
+            <!-- Search Bar and Icons -->
+            <div class="nav-icons">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <div class="login-btn-container">
+                    <a href="loginpg.html" class="login-btn">Login</a>
+                </div>
+
+        </nav>
+    </header>
+    <section class="shows-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Unveiling the sound of our Artist's.</p>
+        </div>
+    </section>
+  
+    <section class="band-story">
+        <div class="container">
+            
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Born in the vibrant music scene of India in 2018, Music Arena emerged from a chance encounter at a local music festival. What started as an impromptu jam session between strangers quickly evolved into a powerful musical connection that would change our lives forever.</p>
+                    <br>
+                    <p>Our journey has been marked by countless late-night rehearsals, small pub gigs, and a relentless drive to create music that moves people. From our first EP release in 2019 to selling out major venues across India in 2022, every milestone has shaped who we are today.</p>
+                </div>
+                <img src="images/bg1.jpg" alt="Band performing" style="width: 100%; border-radius: 10px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="members-section">
+        <div class="container">
+            <h2 class="section-title">Meet The Band</h2>
+            <div class="members-grid">
+                <div class="member-card">
+                    <img src="https://thedailyguardian.com/wp-content/uploads/2024/12/Diljit-Dosanjh-Declares-He-Will-Not-Perform-In-India-1.jpg" alt="Diljit-Dosanjh" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Diljit-Dosanjh</h3>
+                        <p class="member-role">Lead Vocals & Guitar</p>
+                        <p>Influenced by classic rock legends and modern indian artists, Diljit brings a unique blend of Hindi and Panjabi to our sound.</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="https://images.mid-day.com/images/images/2023/aug/FotoJetissunidhisingh_d.jpg" alt="Sunidhi chauhan" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Sunidhi Chauhan</h3>
+                        <p class="member-role">Bass & Backing Vocals</p>
+                        <p>With a background in classical music and a love for funk, Sunidhi creates the groove that drives our music forward.</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="images/drummer.png" alt="Mikka Tomer" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Mikka Tomer</h3>
+                        <p class="member-role">Drums</p>
+                        <p>A self-taught drummer with a passion for complex rhythms, Mikka is the heartbeat of Music Arena.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer Section -->
+     <footer>
+        <div class="container">
+            <p>&copy; 2024 Music Arena. All rights reserved.</p>
+        </div>
+    </footer>
+         </div>
+       </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows - Music Arena</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #f5247d;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    border-radius:70PX;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1d2de1;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.login-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #202020;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color:  #c4af12;
+    cursor: pointer;
+}
+       
+
+        .logo {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #c4af12;
+        }
+
+        .shows-hero {
+            padding-top: 180px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bg3.jpg');
+            background-size: cover;
+            color: #fff;
+            padding-bottom: 70px;
+        }
+
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .show-card {
+            background: #fee0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .show-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .show-info {
+            padding: 1.5rem;
+        }
+
+        .show-date {
+            color: #e31837;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .show-venue {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .show-address {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .book-button {
+            background: #e31837;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .book-button:hover {
+            background: #c4af12;
+        }
+
+        .past-shows {
+            padding: 4rem 0;
+            background: #f13c823d;
+        }
+        .section-title{
+            text-align:center;
+            color:rgb(6, 88, 93)
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .video-card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+    
+    footer {
+           padding: 20px 0;
+           text-align: center;
+           background: #f5247d;
+           color:#170340
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/musiclogo.png" alt="Band Logo">
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="page1home.html">Home</a></li>
+                <li><a href="page2artists.html">Artists</a></li>
+                <li><a href="page3music.html">Music</a></li>
+                <li><a href="page4shows.html">Shows</a></li>
+                <li><a href="page5cont.html">Contact</a></li>
+            </ul>
+
+            <!-- Search Bar and Icons -->
+            <div class="nav-icons">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <div class="login-btn-container">
+                    <a href="loginpg.html" class="login-btn">Login</a>
+                </div>
+        </nav>
+    </header>
+    <section class="shows-hero">
+        <div class="container">
+            <h1>Upcoming Shows</h1>
+            <p>Join us for an unforgettable night of music!!</p>
+        </div>
+    </section>
+
+    <section class="upcoming-shows">
+        <div class="container">
+            <div class="shows-grid">
+                <div class="show-card">
+                    <div class="show-info">
+                        <p class="show-date">December 21, 2024</p>
+                        <h3 class="show-venue">Royal Appe Hall</h3>
+                        <p class="show-address">Cannaught palace, south Delhi 110092, New Delhi</p>
+                        <button class="book-button">Book Tickets</button>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <div class="show-info">
+                        <p class="show-date">December 31, 2024</p>
+                        <h3 class="show-venue">O2 Arena</h3>
+                        <p class="show-address">Peninsula Square, Bendra, Mumbai</p>
+                        <button class="book-button">Book Tickets</button>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <div class="show-info">
+                        <p class="show-date">January 15, 2025</p>
+                        <h3 class="show-venue">Manchester Arena</h3>
+                        <p class="show-address">Victoria Station, Hunts Bank, Manchester </p>
+                        <button class="book-button">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-shows">
+        <div class="container">
+            <h2 class="section-title">Past Show Highlights</h2>
+            <div class="video-grid">    
+                <div class="video-card">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/oCCNCJEsRes" title="No Copyright Epic Cinematic Tense Background Music / Phoenix by Soundridemusic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/ypGySPBoOIg" title="No Copyright Epic Teaser Trailer Background Music / No Limits by ArcticFoxMusic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/PIYHgVDsYGA" title="Rex Hooligan - After The End | DnB | NCS - Copyright Free Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Music Arena. All rights reserved.</p>
+    </div>
+</footer>
+    
+              
+</body>
+</html>

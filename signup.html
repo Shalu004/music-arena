@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgba(28, 248, 101, 0.6), rgba(2, 56, 51, 0.833)),
+                        url('https://source.unsplash.com/random/1920x1080/?concert') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: rgb(13, 2, 110);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2b1616;
+            font-size: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(246, 247, 241, 0.9);
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #00f0bc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2118c2;
+        }
+
+        .terms {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Join Music Arena Band Club</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="membership">Membership Type</label>
+                <select id="membership" required>
+                    <option value="">Select Membership</option>
+                    <option value="basic">Basic Fan Club</option>
+                    <option value="premium">Premium VIP Access</option>
+                    <option value="ultimate">Ultimate Backstage Pass</option>
+                </select>
+            </div>
+            
+            <button type="submit">Sign Up Now</button>
+        </form>
+        
+        <div class="terms">
+            By signing up, you agree to our Terms of Service and Privacy Policy
+        </div>
+    </div>
+</body>
+</html>
+
+

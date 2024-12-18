@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music Arena</title>
+    <style>
+        
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+        
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #924910;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    border-radius:20%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1ddee1;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.login-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #202020;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color:  #ffbb00;
+    cursor: pointer;
+}
+       
+
+ .logo {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+      }
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+     }
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+     }
+
+.nav-links a:hover {
+    color: #6b2e1a;
+    }
+
+.shows-hero {
+    padding-top: 200px;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.freepik.com/free-photo/3d-music-related-scene_23-2151124830.jpg?t=st=1734551739~exp=1734555339~hmac=b521181e66dc589b42215c1f53cf3990d65eef601434f7b960869b6492f8eeb5&w=996');
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 80px;
+    }
+
+
+
+.music-player {
+    padding: 6rem 1rem;
+    background:linear-gradient(135deg,#a2680a93,rgba(104, 38, 4, 0.533)) ;
+    color: #c1ce0d;
+    text-align: center;
+    }
+
+.music-player h2 {
+    margin: bottom 1px;
+     }
+
+h2{
+    color:#202020;
+    padding:10px;
+    }
+    
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #8e4d1c;
+    color:#f2f0f7
+}
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/music.png" alt="Band Logo">
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="page1home.html">Home</a></li>
+                <li><a href="page2artists.html">Artists</a></li>
+                <li><a href="page3music.html">Music</a></li>
+                <li><a href="page4shows.html">Shows</a></li>
+                <li><a href="page5cont.html">Contact</a></li>
+            </ul>
+
+            <!-- Search Bar and Icons -->
+            <div class="nav-icons">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <div class="login-btn-container">
+                <a href="loginpg.html" class="login-btn">Login</a>
+                </div>
+        </nav>
+    </header>
+   
+    <section class="shows-hero">
+        <div class="container">
+            <h1>Latest Releases</h1>
+            <p>Your new favorite playlist starts here.</p>
+        </div>
+    </section>
+    
+
+    <section class="music-player" id="music">
+       
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3BfhCr6GiMcr5OiNOB7Tpc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5cjc3nqHYtTlgtjKRRUzaU?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+     <!-- Footer Section -->
+     <footer>
+        <div class="container">
+            <p>&copy; 2024 Music Arena. All rights reserved.</p>
+        </div>
+    </footer>
+        </div>
+        </div>
+    </footer>
+    </body>
+    </html>
